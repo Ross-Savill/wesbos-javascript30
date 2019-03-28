@@ -106,9 +106,14 @@
     if(e.shiftKey && this.checked) {
       //loop over all checkboxes
       checkboxes.forEach(checkbox => {
+        console.log("checkbox")
         if(checkbox === this || checkbox === lastChecked) {
-          inbetween = !inBetween
+          inBetween = !inBetween
           console.log("starting to check in-between!")
+        }
+
+        if(inBetween) {
+          checkbox.checked = true
         }
       })
     }
